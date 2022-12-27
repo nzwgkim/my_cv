@@ -23,11 +23,11 @@ class _TabPageState extends State<TabPage> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          'CV',
-        ),
-      ),
+      // appBar: AppBar(
+      //   title: Text(
+      //     'CV',
+      //   ),
+      // ),
       body: Column(
         children: [
           Container(
