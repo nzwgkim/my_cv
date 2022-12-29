@@ -1,5 +1,19 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.my_cv">
+<!--    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>-->
+<!--    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />-->
+
+<!--    <application-->
+<!--        android:label="google_maps_flutter"-->
+<!--        android:icon="@mipmap/ic_launcher">-->
+
+<!--        &lt;!&ndash; TODO: Add your API key here &ndash;&gt;-->
+<!--        <meta-data android:name="com.google.android.geo.API_KEY"-->
+<!--            android:value="AIzaSyDLkc_Yn6xSxm3YMYOpidGoXWV_8yndNSI"/> // android API Key-->
+
+<!--        <activity>...</activity>-->
+<!--    </application>-->
+
    <application
         android:label="my_cv"
         android:name="${applicationName}"
@@ -12,6 +26,11 @@
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
             android:hardwareAccelerated="true"
             android:windowSoftInputMode="adjustResize">
+
+            <meta-data android:name="com.google.android.geo.API_KEY"
+                android:value="AIzaSyDLkc_Yn6xSxm3YMYOpidGoXWV_8yndNSI"/> // android API Key
+
+
             <!-- Specifies an Android theme to apply to this Activity as soon as
                  the Android process has started. This theme is visible to the user
                  while the Flutter UI initializes. After that, this theme continues
