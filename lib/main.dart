@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
-// import 'package:my_cv/app/Dialpad.dart';
-import 'package:my_cv/app/myCvTabPage.dart';
-// import 'package:my_cv/app/myCvTable.dart';
-// import 'package:my_cv/app/map_sample.dart';
 // import 'package:my_cv/app/myCvTabPage.dart';
-// import 'app/myCvGridTable.dart';
+import 'package:my_cv/app/myGmap.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,7 +19,7 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.yellow,
         appBar: AppBar(title: const Text(_title)),
-        body: TabPage(),
+        body: MyGmapApp(),
       ),
     );
   }
