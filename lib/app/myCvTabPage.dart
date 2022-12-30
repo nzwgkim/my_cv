@@ -10,11 +10,17 @@ class TabPage extends StatefulWidget {
 
 class _TabPageState extends State<TabPage> with TickerProviderStateMixin {
   late TabController _tabController;
+  final List<String> itemsTabControls = const [
+    'Personal Details',
+    'Summary',
+    'Skills',
+    'Experience',
+  ];
 
   @override
   void initState() {
     _tabController = TabController(
-      length: 4,
+      length: itemsTabControls.length,
       vsync: this, //vsync에 this 형태로 전달해야 애니메이션이 정상 처리됨
     );
     super.initState();
@@ -22,6 +28,16 @@ class _TabPageState extends State<TabPage> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
+    final tabController = List<Widget>.generate(
+        itemsTabControls.length,
+        (int i) => Container(
+              height: 80,
+              alignment: Alignment.center,
+              child: Text(
+                itemsTabControls[i],
+              ),
+            ));
+
     return Scaffold(
       // appBar: AppBar(
       //   title: Text(
@@ -35,36 +51,7 @@ class _TabPageState extends State<TabPage> with TickerProviderStateMixin {
               border: Border.all(),
             ),
             child: TabBar(
-              tabs: [
-                Container(
-                  height: 80,
-                  alignment: Alignment.center,
-                  child: Text(
-                    'Personal Details',
-                  ),
-                ),
-                Container(
-                  height: 80,
-                  alignment: Alignment.center,
-                  child: Text(
-                    'Summary',
-                  ),
-                ),
-                Container(
-                  height: 80,
-                  alignment: Alignment.center,
-                  child: Text(
-                    'Skills',
-                  ),
-                ),
-                Container(
-                  height: 80,
-                  alignment: Alignment.center,
-                  child: Text(
-                    'Experience',
-                  ),
-                ),
-              ],
+              tabs: tabController,
               indicator: BoxDecoration(
                 gradient: LinearGradient(
                   //배경 그라데이션 적용

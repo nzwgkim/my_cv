@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-// import 'package:my_cv/app/myCvTabPage.dart';
-import 'package:my_cv/app/myGmap.dart';
+import 'package:my_cv/app/myCvTabPage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +18,7 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.yellow,
         appBar: AppBar(title: const Text(_title)),
-        body: MyGmapApp(),
+        body: TabPage(),
       ),
     );
   }
