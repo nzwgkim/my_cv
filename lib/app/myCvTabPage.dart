@@ -35,6 +35,7 @@ class _TabPageState extends State<TabPage> with TickerProviderStateMixin {
               alignment: Alignment.center,
               child: Text(
                 itemsTabControls[i],
+                style: Theme.of(context).textTheme.bodyText1,
               ),
             ));
 
@@ -103,8 +104,7 @@ class _TabPageState extends State<TabPage> with TickerProviderStateMixin {
                             ),
                             Text(
                               '95 Totaravale drive Totara Vale Auckland 0629',
-                              style:
-                                  TextStyle(color: Colors.brown, fontSize: 15),
+                              style: Theme.of(context).textTheme.bodyText2,
                             ),
                             OutlinedButton(
                               onPressed: () async {
@@ -297,7 +297,10 @@ class _TabPageState extends State<TabPage> with TickerProviderStateMixin {
                     // for 3rd tab
                     color: Colors.yellow[300],
                     alignment: Alignment.center,
-                    child: Text('어쩌구 저쩌구...', style: TextStyle(fontSize: 30))),
+                    child: Text(
+                      '어쩌구 저쩌구...',
+                      style: Theme.of(context).textTheme.bodyText2,
+                    )),
                 Container(
                   // for 4th tab
                   color: Colors.yellow[400],
